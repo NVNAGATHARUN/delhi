@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────
+#  Quantum-Enhanced Traffic System
+#  Backend Requirements
+#  Install with: pip install -r requirements.txt
+# ─────────────────────────────────────────────
+
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+
+# Database
+sqlalchemy==2.0.34
+
+# Computer Vision (optional for live camera)
+# ultralytics>=8.0.0
+# opencv-python>=4.8.0
+
+# Quantum Computing (optional for full QAOA)
+# qiskit>=1.0.0
+# qiskit-aer>=0.14.0
+# qiskit-optimization>=0.6.0
+
+# Traffic Simulation (requires SUMO installation)
+# traci>=1.18.0
+# sumolib>=1.18.0
+
+# Data Science
+numpy>=1.24.0
+
+# Utilities
+python-multipart>=0.0.9
