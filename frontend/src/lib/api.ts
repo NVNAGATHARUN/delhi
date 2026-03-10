@@ -1,4 +1,4 @@
-// Shared API layer — connects all pages to the FastAPI backend
+// Shared API layer — connects all pages to the FastAPI backend (redeploy trigger)
 
 export const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 export const WS_URL = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/ws";
