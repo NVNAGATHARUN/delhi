@@ -1,6 +1,6 @@
 "use client";
 // ANALYTICS — Real-time comprehensive analytics dashboard
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, Fragment } from "react";
 import { motion } from "framer-motion";
 import { AreaChart, Area, BarChart, Bar, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie } from "recharts";
 import { BarChart2 } from "lucide-react";
@@ -161,12 +161,12 @@ export default function AnalyticsPage() {
                         {LANE_KEYS.map(intId => {
                             const lanes = congestionNet[intId] ?? {};
                             return (
-                                <>
+                                <Fragment key={intId}>
                                     <div key={`label-${intId}`} style={{ fontWeight: 700, color: "var(--text-3)", padding: "3px 0", textTransform: "capitalize", fontSize: 9 }}>{intId}</div>
                                     {LANE_KEYS.map(lane => (
                                         <HeatCell key={`${intId}-${lane}`} cong={lanes[lane] ?? "LOW"} />
                                     ))}
-                                </>
+                                </Fragment>
                             );
                         })}
                     </div>
