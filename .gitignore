@@ -34,3 +34,13 @@ htmlcov/
 # Note: Keep configs if they are part of the repo, but exclude generated output
 output/
 records/
+
+# AI Models and Weights
+*.pt
+*.onnx
+*.weights
+
+# Preview Images and Media
+traffic_dashboard_preview*.png
+*.mp4
+*.avi
