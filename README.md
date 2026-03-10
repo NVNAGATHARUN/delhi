@@ -6,6 +6,11 @@ An intelligent traffic management platform combining YOLOv8 computer vision, Qis
 
 ---
 
+## 👥 Getting Started (For New Developers)
+If you're new to the project or looking to contribute, please check out our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide for installation and setup instructions.
+
+---
+
 ## Live Demo
 
 ```bash
