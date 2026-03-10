@@ -180,10 +180,12 @@ def physics_step(tick: int):
     state["phase_max"] = state["intersections"]["north"]["phase_max"]
 
     # History snapshot
-    snap = {"t": tick, "total": global_total}
+    snap = {"t": tick, "total": global_total,
+            "efficiency": state["intersections"]["north"]["quantum_efficiency"]}
     for int_id in INTERSECTIONS:
-        snap[int_id] = sum(isect_state["lanes"][l]["vehicles"] for l in isect_state["lanes"])
-    state["history"] = state["history"][-39:] + [snap]
+        int_state_h = state["intersections"][int_id]
+        snap[int_id] = sum(int_state_h["lanes"][l]["vehicles"] for l in int_state_h["lanes"])
+    state["history"] = state["history"][-59:] + [snap]
 
 # ─── Broadcast ────────────────────────────────────────────────────────────────
 async def broadcast():

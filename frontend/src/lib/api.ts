@@ -1,7 +1,7 @@
 // Shared API layer — connects all pages to the FastAPI backend
 
-export const API = "http://localhost:8000";
-export const WS_URL = "ws://localhost:8000/ws";
+export const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+export const WS_URL = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/ws";
 
 export async function apiGet<T = unknown>(path: string): Promise<T> {
     const r = await fetch(`${API}${path}`, { cache: "no-store" });
