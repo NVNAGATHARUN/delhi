@@ -1,31 +1,29 @@
 # ─────────────────────────────────────────────
-#  Quantum-Enhanced Traffic System
+#  Q-Traffic — Quantum-Enhanced AI Traffic System
 #  Backend Requirements
-#  Install with: pip install -r requirements.txt
+#  Install: pip install -r requirements.txt
 # ─────────────────────────────────────────────
 
 # Web Framework
 fastapi==0.115.0
 uvicorn[standard]==0.30.0
 
-# Database
-sqlalchemy==2.0.34
-
-# Computer Vision (optional for live camera)
-# ultralytics>=8.0.0
-# opencv-python>=4.8.0
-
-# Quantum Computing (optional for full QAOA)
-# qiskit>=1.0.0
-# qiskit-aer>=0.14.0
-# qiskit-optimization>=0.6.0
-
-# Traffic Simulation (requires SUMO installation)
-# traci>=1.18.0
-# sumolib>=1.18.0
+# Form data / file uploads
+python-multipart>=0.0.9
 
 # Data Science
 numpy>=1.24.0
 
-# Utilities
-python-multipart>=0.0.9
+# Computer Vision (for real YOLOv8 detection — install separately)
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+
+# Quantum Computing (optional, for real QAOA — can take a while to install)
+# qiskit>=1.0.0
+# qiskit-aer>=0.14.0
+# qiskit-algorithms>=0.3.0
+# qiskit-optimization>=0.6.0
+
+# RL Training (optional, for real PPO agent)
+# stable-baselines3>=2.0.0
+# gymnasium>=0.29.0
